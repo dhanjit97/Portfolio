@@ -1,0 +1,275 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-paper: #F4EFE6;
+  --color-paper-card: #FAF6EE;
+  --color-ink: #141413;
+  --color-signal-lime: #D7FF3F;
+  --color-signal-orange: #F04828;
+}
+
+:root {
+  --bg-paper: #F4EFE6;
+  --ink: #141413;
+  --lime: #D7FF3F;
+  --orange: #F04828;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-paper);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-mono);
+}
+
+/* ------------------------------------------------------------- */
+/* ANIMATED NEO-BRUTALIST SCROLLBAR                              */
+/* ------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4EFE6;
+  border-left: 2px solid #141413;
+  border-top: 2px solid #141413;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 6px,
+    rgba(20, 20, 19, 0.08) 6px,
+    rgba(20, 20, 19, 0.08) 12px
+  );
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #D7FF3F;
+  border: 2px solid #141413;
+  box-shadow: inset -1px -1px 0px rgba(20, 20, 19, 0.4);
+  background-image: linear-gradient(
+    135deg,
+    #D7FF3F 25%,
+    #141413 25%,
+    #141413 50%,
+    #D7FF3F 50%,
+    #D7FF3F 75%,
+    #141413 75%,
+    #141413 100%
+  );
+  background-size: 16px 16px;
+  animation: scrollbarStripe 1.8s linear infinite;
+}
+
+@keyframes scrollbarStripe {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 16px 32px;
+  }
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #F04828;
+  background-image: linear-gradient(
+    135deg,
+    #F04828 25%,
+    #141413 25%,
+    #141413 50%,
+    #F04828 50%,
+    #F04828 75%,
+    #141413 75%,
+    #141413 100%
+  );
+  box-shadow: 0 0 10px rgba(240, 72, 40, 0.6);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #141413;
+  background-image: none;
+}
+
+/* Firefox scrollbar support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #D7FF3F #F4EFE6;
+}
+
+/* ------------------------------------------------------------- */
+/* CRAZY TACTILE NEO-BRUTALIST HOVER EFFECTS                     */
+/* ------------------------------------------------------------- */
+.neo-card {
+  border: 2px solid #141413;
+  box-shadow: 4px 4px 0px #141413;
+  background-color: #FFFFFF;
+  transition: transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.16s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.neo-card-subtle {
+  border: 2px solid #141413;
+  box-shadow: 3px 3px 0px #141413;
+  background-color: #FAF6EE;
+  transition: transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.16s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Springy tilt & lift hovers */
+.hover-lift:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px #141413;
+}
+
+.hover-tilt-left:hover {
+  transform: translate(-3px, -3px) rotate(-0.8deg);
+  box-shadow: 7px 7px 0px #141413;
+}
+
+.hover-tilt-right:hover {
+  transform: translate(-3px, -3px) rotate(0.8deg);
+  box-shadow: 7px 7px 0px #141413;
+}
+
+/* Tactile Buttons with Spring Bounce */
+.neo-btn {
+  border: 2px solid #141413;
+  box-shadow: 3px 3px 0px #141413;
+  background-color: #FFFFFF;
+  transition: transform 0.14s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.14s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background-color 0.14s ease;
+}
+
+.neo-btn:hover {
+  transform: translate(-2px, -2px) rotate(-0.5deg);
+  box-shadow: 5px 5px 0px #141413;
+  background-color: #FFFFFF;
+}
+
+.neo-btn:active {
+  transform: translate(2px, 2px) scale(0.98);
+  box-shadow: 1px 1px 0px #141413;
+}
+
+.neo-btn-primary {
+  border: 2px solid #141413;
+  box-shadow: 3px 3px 0px #141413;
+  background-color: #D7FF3F;
+  color: #141413;
+  font-weight: 600;
+  transition: transform 0.14s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.14s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background-color 0.14s ease;
+}
+
+.neo-btn-primary:hover {
+  transform: translate(-2px, -2px) rotate(0.6deg);
+  box-shadow: 5px 5px 0px #141413;
+  background-color: #CCF52B;
+}
+
+.neo-btn-primary:active {
+  transform: translate(2px, 2px) scale(0.98);
+  box-shadow: 1px 1px 0px #141413;
+}
+
+/* Image scanline & inverted flash hover effect */
+.neo-image-frame {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.neo-image-frame::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(215, 255, 63, 0.3),
+    transparent
+  );
+  pointer-events: none;
+  transition: left 0.5s ease;
+}
+
+.neo-image-frame:hover::after {
+  left: 150%;
+}
+
+/* Continuous Marquee Ribbon Track */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation: marqueeScroll 22s linear infinite;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Optical scanlines overlay for simulated monitors */
+.scanlines-overlay {
+  background: linear-gradient(
+    rgba(20, 20, 19, 0) 50%, 
+    rgba(20, 20, 19, 0.08) 50%
+  );
+  background-size: 100% 4px;
+}
+
+/* Accessible focus rings */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 3px solid #141413;
+  outline-offset: 2px;
+}
+
+/* Notebook grid */
+.bg-grid-notebook {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(20, 20, 19, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 20, 19, 0.05) 1px, transparent 1px);
+}
+
+/* Reduced motion bypass */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-content {
+    animation: none !important;
+  }
+  ::-webkit-scrollbar-thumb {
+    animation: none !important;
+  }
+  .hover-tilt-left:hover, .hover-tilt-right:hover, .hover-lift:hover {
+    transform: none !important;
+  }
+}
