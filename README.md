@@ -147,45 +147,9 @@ npm run lint
 
 ⸻
 
-Project Structure
 
-Portfolio/
-├── docs/
-│   ├── CONTENT_VERIFICATION.md
-│   └── DESIGN_EXPLORATION.md
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   │   ├── AboutSection.tsx
-│   │   ├── ContactSection.tsx
-│   │   ├── FieldNotes.tsx
-│   │   ├── Footer.tsx
-│   │   ├── Hero.tsx
-│   │   ├── MarqueeTape.tsx
-│   │   ├── Navbar.tsx
-│   │   ├── ProjectDetailModal.tsx
-│   │   ├── ProjectShowcase.tsx
-│   │   ├── ProjectVisuals.tsx
-│   │   ├── ScrollProgress.tsx
-│   │   ├── TechnicalFocus.tsx
-│   │   ├── ThreeSpecimen.tsx
-│   │   └── VisualAssetGenerator.tsx
-│   ├── data/
-│   │   └── portfolioData.ts
-│   ├── types/
-│   │   └── portfolio.ts
-│   ├── App.tsx
-│   ├── index.css
-│   └── main.tsx
-├── .env.example
-├── .gitignore
-├── index.html
-├── LICENSE
-├── package.json
-├── package-lock.json
-├── tsconfig.json
-└── vite.config.ts
+
+
 
 The directory tree is illustrative. Update it to match the actual files in the repository.
 
