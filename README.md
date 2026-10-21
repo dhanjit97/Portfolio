@@ -155,21 +155,6 @@ The directory tree is illustrative. Update it to match the actual files in the r
 
 ⸻
 
-Security and Best Practices
-
-The project aims to follow practical frontend security and maintainability principles.
-
-* Environment variables: Keep private credentials out of source code and version control.
-* External links: Use appropriate rel="noopener noreferrer" attributes with links that open new tabs.
-* Safe rendering: Avoid unsafe HTML injection and unnecessary dynamic code execution.
-* Resource management: Dispose of Three.js resources and clean up event listeners when components unmount.
-* Accessibility: Support keyboard navigation and reduced-motion preferences.
-* Dependency maintenance: Audit dependencies and address reported vulnerabilities regularly.
-
-Security and dependency-audit claims should be verified against the current codebase before being presented as completed audit results.
-
-⸻
-
 Documentation
 
 Additional project documentation is available in the docs/ directory:
